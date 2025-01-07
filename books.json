@@ -1,0 +1,93 @@
+[
+    {
+        "folder": "moby-dick",
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "year": 1851,
+        "language": "English"
+    },
+    {
+        "folder": "colors-out-space",
+        "title": "The colour out of space",
+        "author": "H. P. Lovecraft",
+        "year": 1927,
+        "language": "English"
+    },
+    {
+        "folder": "don-quijote",
+        "title": "Don Quijote",
+        "author": "Miguel de Cervantes Saavedra",
+        "year": 1605,
+        "language": "Spanish"
+    },
+    {
+        "folder": "don-quixote",
+        "title": "Don Quixote",
+        "author": "Miguel de Cervantes Saavedra",
+        "year": 1605,
+        "language": "English"
+    },
+    {
+        "folder": "alice-wonderland",
+        "title": "Alice's Adventures in Wonderland",
+        "author": "Lewis Carroll",
+        "year": 1865,
+        "language": "English"
+    },
+    {
+        "folder": "picture-dorian-gray",
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "year": 1890,
+        "language": "English"
+    },
+    {
+        "folder": "crime-punishment",
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "year": 1866,
+        "language": "English"
+    },
+    {
+        "folder": "doctor-faustus",
+        "title": "The Tragical History of Doctor Faustus",
+        "author": "Christopher Marlowe",
+        "year": 1592,
+        "language": "English"
+    },
+    {
+        "folder": "frankenstein",
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "year": 1818,
+        "language": "English"
+    },
+    {
+        "folder": "metamorphosis",
+        "title": "The Metamorphosis",
+        "author": "Franz Kafka",
+        "year": 1915,
+        "language": "English"
+    },
+    {
+        "folder": "the-prince",
+        "title": "The Prince",
+        "author": "Niccolò Machiavelli",
+        "year": 1532,
+        "language": "English"
+    },
+    {
+        "folder": "ulysses",
+        "title": "Ulysses",
+        "author": "James Joyce",
+        "year": 1922,
+        "language": "English"
+    },
+    {
+        "folder": "wuthering-heights",
+        "title": "Wuthering Heights",
+        "author": "Emily Brontë",
+        "year": 1847,
+        "language": "English"
+    }
+]

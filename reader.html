@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reader</title>
+    <style>
+        .floating-buttons {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .btn {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        #bookContent {
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-buttons">
+        <button class="btn" onclick="window.location.href='index.html'">← Back to Library</button>
+        <button class="btn" onclick="setBookmark()">Set Bookmark</button>
+        <button class="btn" onclick="loadBookmark()">Go to Bookmark</button>
+    </div>
+
+    <div id="bookContent">
+        <!-- book content here -->
+    </div>
+
+    <script>
+        let currentBook = '';
+
+        async function loadBook() {
+    const urlParams = new URLSearchParams(window.location.search);
+    currentBook = urlParams.get('book');
+    
+    if (!currentBook) {
+        window.location.href = 'index.html';
+        return;
+    }
+
+    try {
+        const response = await fetch(`${currentBook}/book.html`);
+        let content = await response.text();
+        
+        // mega regex to fix relative paths
+        content = content.replace(
+            /(src|href)=(["'])((?!http|\/\/|#)(?:\.\/)?)/g, 
+            `$1=$2${currentBook}/`
+        );
+
+        document.getElementById('bookContent').innerHTML = content;
+        
+        // fix dynamic resources
+        const links = document.querySelectorAll('link[rel="icon"], link[rel="stylesheet"]');
+        links.forEach(link => {
+            if (!link.href.startsWith('http') && !link.href.startsWith('/')) {
+                link.href = `${currentBook}/${link.getAttribute('href')}`;
+            }
+        });
+
+        // load bookmark
+        const bookmark = localStorage.getItem(`bookmark_${currentBook}`);
+        if (bookmark) {
+            window.scrollTo(0, parseInt(bookmark));
+        }
+    } catch (error) {
+        console.error('Error loading book:', error);
+    }
+}
+        
+        function setBookmark() {
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            localStorage.setItem(`bookmark_${currentBook}`, scrollPosition.toString());
+            alert('Bookmark set!');
+        }
+
+        function loadBookmark() {
+            const bookmark = localStorage.getItem(`bookmark_${currentBook}`);
+            if (bookmark) {
+                window.scrollTo({
+                    top: parseInt(bookmark),
+                    behavior: 'smooth'
+                });
+            } else {
+                alert('No bookmark found for this book.');
+            }
+        }
+
+        loadBook();
+    </script>
+</body>
+</html>
