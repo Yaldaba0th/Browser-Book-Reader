@@ -1,5 +1,5 @@
 # Browser Book Reader 
-Webpage to read books sourced from [Project Gutenberg](https://www.gutenberg.org/).
+Webpage to read books sourced from [Project Gutenberg](https://www.gutenberg.org/). Click [here](https://yaldaba0th.github.io/Browser-Book-Reader/) to start reading.
 
 
 >## Project Gutenberg Terms of Use:  
