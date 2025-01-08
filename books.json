@@ -89,5 +89,12 @@
         "author": "Emily Brontë",
         "year": 1847,
         "language": "English"
+    },
+    {
+        "folder": "cronicas-marianela",
+        "title": "Crónicas de Marianela",
+        "author": "Angélica Palma",
+        "year": 1878,
+        "language": "Spanish"
     }
 ]
