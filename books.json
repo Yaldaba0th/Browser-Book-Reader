@@ -72,7 +72,7 @@
     {
         "folder": "the-prince",
         "title": "The Prince",
-        "author": "Niccolò Machiavelli",
+        "author": "Niccol\u00f2 Machiavelli",
         "year": 1532,
         "language": "English"
     },
@@ -86,15 +86,43 @@
     {
         "folder": "wuthering-heights",
         "title": "Wuthering Heights",
-        "author": "Emily Brontë",
+        "author": "Emily Bront\u00eb",
         "year": 1847,
         "language": "English"
     },
     {
         "folder": "cronicas-marianela",
-        "title": "Crónicas de Marianela",
-        "author": "Angélica Palma",
+        "title": "Cr\u00f3nicas de Marianela",
+        "author": "Ang\u00e9lica Palma",
         "year": 1878,
         "language": "Spanish"
+    },
+    {
+        "folder": "a-christmas-carol-in-prose-being-a-ghost-story-of-christmas",
+        "title": "A Christmas Carol in Prose; Being a Ghost Story of Christmas",
+        "author": "Charles Dickens",
+        "year": "N/D",
+        "language": "English"
+    },
+    {
+        "folder": "middlemarch",
+        "title": "Middlemarch",
+        "author": "George Eliot",
+        "year": "N/D",
+        "language": "English"
+    },
+    {
+        "folder": "dracula",
+        "title": "Dracula",
+        "author": "Bram Stoker",
+        "year": "N/D",
+        "language": "English"
+    },
+    {
+        "folder": "romeo-and-juliet",
+        "title": "Romeo and Juliet",
+        "author": "William Shakespeare",
+        "year": "N/D",
+        "language": "English"
     }
 ]

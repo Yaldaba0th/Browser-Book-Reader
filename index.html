@@ -121,11 +121,19 @@
                 const bookCard = document.createElement('div');
                 bookCard.className = 'book-card';
                 
+                // bookCard.innerHTML = `
+                //     <img src="${coverUrl}" class="book-cover" alt="${book.title} cover">
+                //     <h3>${book.title}</h3>
+                //     <p>Author: ${book.author}</p>
+                //     <p>Year: ${book.year}</p>
+                //     <p>Language: ${book.language}</p>
+                //     <a href="reader.html?book=${book.folder}">Read Book</a>
+                // `;
+
                 bookCard.innerHTML = `
                     <img src="${coverUrl}" class="book-cover" alt="${book.title} cover">
                     <h3>${book.title}</h3>
                     <p>Author: ${book.author}</p>
-                    <p>Year: ${book.year}</p>
                     <p>Language: ${book.language}</p>
                     <a href="reader.html?book=${book.folder}">Read Book</a>
                 `;
